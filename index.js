@@ -9,9 +9,9 @@ const fs = require('fs');
 
 // ======== LIBRARY MODUELS ============
 
-// const Manager = require("./library/manager");
-// const Engineer = require("./library/engineer");
-// const Intern = require("./library/intern");
+// const Manager = require("./lib/manager");
+// const Engineer = require("./lib/engineer");
+// const Intern = require("./lib/intern");
 
 // =============  PROMPT ARRAYS  ==============
 
@@ -23,6 +23,12 @@ const initialPrompts = [
     message: "What is your name?"
   },
   {
+    type: 'list',
+    name: 'role',
+    message: 'What is your role?',
+    choices: ["Manager", "Engineer", "Intern"]
+  },
+  {
     type: "input",
     name: "id",
     message: "What is your ID number?"
@@ -31,12 +37,6 @@ const initialPrompts = [
     type: "input",
     name: "email",
     message: "What is your email?"
-  },
-  {
-    type: 'list',
-    name: 'role',
-    message: 'What is your role?',
-    choices: ["Manager", "Engineer", "Intern"]
   },
 
 ]
@@ -61,7 +61,7 @@ const internPrompt = [
   {
     type: "input",
     name: "school",
-    message: "What school do you attend?"
+    message: "What univeristy did / do you attend?"
   },
 ]
 
@@ -171,7 +171,7 @@ function writeToFile(response) {
 
   console.log("team", teamMembers)
 
-  fs.writeFile('index.html', generateHtmlTemplate(teamMembers), (err) => {
+  fs.writeFile('index.html', generateHtmlTemplate(response), (err) => {
     err
       ? console.log(err)
       : console.log("Success!")
