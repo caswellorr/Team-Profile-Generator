@@ -5,13 +5,13 @@ const fs = require('fs');
 
 // =============== IMPORT GENERATE HTML =================
 
-// const generateHtmlTemplate = require('./src/generateHtmlTemplate.js');
+const generateHtmlTemplate = require('./src/generateHtmlTemplate.js');
 
 // ======== LIBRARY MODUELS ============
 
-// const Manager = require("./lib/manager");
-// const Engineer = require("./lib/engineer");
-// const Intern = require("./lib/intern");
+const Manager = require("./lib/manager");
+const Engineer = require("./lib/engineer");
+const Intern = require("./lib/intern");
 
 // =============  PROMPT ARRAYS  ==============
 
@@ -148,18 +148,12 @@ const createTeam = async (response) => {
     addTeamMember = addMember;
 
   }
+  
+  if (!addTeamMember) {
 
+    writeToFile(teamMembers);
 
-
-  // else {
-
-  //     await inquirer
-
-  //     .then((response) => {
-  //       writeToFile(response);
-
-  //     })
-  // }
+  }
 
 };
 
@@ -167,13 +161,14 @@ createTeam();
 
 // ================ WRITE TO FILE FUNCTION ============ 
 
-function writeToFile(response) {
+function writeToFile(teamMembers) {
 
   console.log("team", teamMembers)
 
-  fs.writeFile('index.html', generateHtmlTemplate(response), (err) => {
+  fs.writeFile('index.html', generateHtmlTemplate(teamMembers), (err) => {
     err
       ? console.log(err)
       : console.log("Success!")
+
   })
 };

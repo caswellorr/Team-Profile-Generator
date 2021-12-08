@@ -1,50 +1,52 @@
 
+
 const Employee = require("../lib/employee");
 
-describe ('Employee', () => {
+describe ("Employee", () => {
 
-  describe('instantiation', () => {
+  describe("instantiation", () => {
 
-    it('should pass and instantiate object correctly', () => {
-      // Arrange 
+    it("should pass and instantiate object correctly", () => {
       
+      // Arrange 
       // Act
-      let testEmployee = new Employee ("Jason", 1 , "jasonday@gmail.com")
+      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
   
       // Assert
-      expect(testEmployee.name).toBe("Jason")
-      expect(testEmployee.id).toBe(1)
-      expect(testEmployee.email).toBe("jasonday@gmail.com")
+      expect(testEmployee.name).toBe("Keith");
+      expect(testEmployee.id).toBe(14);
+      expect(testEmployee.email).toBe("keithrichards@yahoo.com");
       
     });
 
   })
   
-  describe('getName', () => {
+  describe("getName", () => {
     
-    it('should return name correctly', () => {
-      // Arrange 
-      
-      let testEmployee = new Employee ("Jason", 1 , "jasonday@gmail.com")
+    it("should return name correctly", () => {
+
+      // Arrange
+      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
+
       // Act
-      let name = testEmployee.getName()
+      let name = testEmployee.getName();
   
       // Assert
-      expect(name).toBe("Jason");
+      expect(name).toBe("Keith");
       
     });
-   
     
   });
 
-  describe('getRole', () => {
+  describe("getRole", () => {
 
-    it('should return role correctly', () => {
+    it("should return role correctly", () => {
+
       // Arrange 
-  
-      let testEmployee = new Employee ("Jason", 1 , "jasonday@gmail.com")
+      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
+
       // Act
-      let role = testEmployee.getRole()
+      let role = testEmployee.getRole();
   
       // Assert
       expect(role).toBe("Engineer");
@@ -53,36 +55,38 @@ describe ('Employee', () => {
 
   });
 
-  describe('getId', () => {
+  describe("getId", () => {
 
-    it('should return id correctly', () => {
+    it("should return id correctly", () => {
+      
       // Arrange 
+      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
 
-      let testEmployee = new Employee ("Jason", 1 , "jasonday@gmail.com")
       // Act
-      let id = testEmployee.getId()
+      let id = testEmployee.getId();
   
       // Assert
-      expect(id).toBe("1");
+      expect(id).toBe("14");
       
     });
 
   });
 
-  describe('getEmail', () => {
+  describe("getEmail", () => {
 
-    it('should return email correctlty', () => {
+    it("should return email correctlty", () => {
+
       // Arrange 
-  
-      let testEmployee = new Employee ("Jason", 1 , "jasonday@gmail.com")
+      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
+
       // Act
-      let email = testEmployee.getEmail()
+      let email = testEmployee.getEmail();
   
       // Assert
-      expect(email).toBe("jasonday@gmail.com");
+      expect(email).toBe("keithrichards@yahoo.com");
 
     });
 
   });
 
-})
+});
