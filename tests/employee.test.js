@@ -49,7 +49,7 @@ describe ("Employee", () => {
       let role = testEmployee.getRole();
   
       // Assert
-      expect(role).toBe("Engineer");
+      expect(role).toBe("Employee");
       
     });
 
@@ -66,7 +66,7 @@ describe ("Employee", () => {
       let id = testEmployee.getId();
   
       // Assert
-      expect(id).toBe("14");
+      expect(id).toBe(14);
       
     });
 

@@ -16,7 +16,7 @@ describe ("Engineer", () => {
       expect(testEngineer.name).toBe("Charlie");
       expect(testEngineer.id).toBe(22);
       expect(testEngineer.email).toBe("charliewatt@yahoo.com");
-      expect(testEngineer.gitHub).toBe("charliewatt");
+      expect(testEngineer.github).toBe("charliewatt");
  
     });
 
@@ -67,7 +67,7 @@ describe ("Engineer", () => {
       let id = testEngineer.getId();
   
       // Assert
-      expect(id).toBe("22");
+      expect(id).toBe(22);
       
     });
 
@@ -98,10 +98,10 @@ describe ("Engineer", () => {
       let testEngineer = new Engineer ("Charlie", 22, "charliewatt@yahoo.com", "charliewatt");
 
       // Act
-      let gitHub = testEngineer.getGitHub();
+      let github = testEngineer.getGitHub();
   
       // Assert
-      expect(gitHub).toBe("charliewatt");
+      expect(github).toBe("charliewatt");
 
     });
 

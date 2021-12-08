@@ -15,8 +15,8 @@ describe ("Intern", () => {
       // Assert
       expect(testIntern.name).toBe("Ronnie");
       expect(testIntern.id).toBe(67);
-      expect(testIntern.email).toBe("Ronniewatt@yahoo.com");
-      expect(testIntern.school).toBe("London Univeristy");
+      expect(testIntern.email).toBe("ronniewood@yahoo.com");
+      expect(testIntern.school).toBe("University of London");
  
     });
 
@@ -67,7 +67,7 @@ describe ("Intern", () => {
       let id = testIntern.getId();
   
       // Assert
-      expect(id).toBe("67");
+      expect(id).toBe(67);
       
     });
 

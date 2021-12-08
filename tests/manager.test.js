@@ -69,7 +69,7 @@ describe ("Manager", () => {
       let id = testManager.getId();
   
       // Assert
-      expect(id).toBe("10");
+      expect(id).toBe(10);
       
     });
 
