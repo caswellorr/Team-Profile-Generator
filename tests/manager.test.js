@@ -77,7 +77,7 @@ describe ("Manager", () => {
 
   describe("getEmail", () => {
 
-    it("should return email correctlty", () => {
+    it("should return email correctly", () => {
 
       // Arrange 
       let testManager = new Manager ("Mick", 10, "mickjagger@yahoo.com", 1966);

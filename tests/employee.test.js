@@ -10,7 +10,7 @@ describe ("Employee", () => {
       
       // Arrange 
       // Act
-      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
+      let testEmployee = new Employee ("Keith", 14, "keithrichards@yahoo.com");
   
       // Assert
       expect(testEmployee.name).toBe("Keith");
@@ -26,7 +26,7 @@ describe ("Employee", () => {
     it("should return name correctly", () => {
 
       // Arrange
-      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
+      let testEmployee = new Employee ("Keith", 14, "keithrichards@yahoo.com");
 
       // Act
       let name = testEmployee.getName();
@@ -43,7 +43,7 @@ describe ("Employee", () => {
     it("should return role correctly", () => {
 
       // Arrange 
-      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
+      let testEmployee = new Employee ("Keith", 14, "keithrichards@yahoo.com");
 
       // Act
       let role = testEmployee.getRole();
@@ -60,7 +60,7 @@ describe ("Employee", () => {
     it("should return id correctly", () => {
       
       // Arrange 
-      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
+      let testEmployee = new Employee ("Keith", 14, "keithrichards@yahoo.com");
 
       // Act
       let id = testEmployee.getId();
@@ -74,10 +74,10 @@ describe ("Employee", () => {
 
   describe("getEmail", () => {
 
-    it("should return email correctlty", () => {
+    it("should return email correctly", () => {
 
       // Arrange 
-      let testEmployee = new Employee ("Keith", 14 , "keithrichards@yahoo.com");
+      let testEmployee = new Employee ("Keith", 14, "keithrichards@yahoo.com");
 
       // Act
       let email = testEmployee.getEmail();

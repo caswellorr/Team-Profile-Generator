@@ -10,7 +10,7 @@ describe ("Engineer", () => {
       
       // Arrange 
       // Act
-      let testEngineer = new Engineer ("Charlie", 22 , "charliewatt@yahoo.com", "charliewatt");
+      let testEngineer = new Engineer ("Charlie", 22, "charliewatt@yahoo.com", "charliewatt");
   
       // Assert
       expect(testEngineer.name).toBe("Charlie");
@@ -27,7 +27,7 @@ describe ("Engineer", () => {
     it("should return name correctly", () => {
 
       // Arrange
-      let testEngineer = new Engineer ("Charlie", 22 , "charliewatt@yahoo.com", "charliewatt");
+      let testEngineer = new Engineer ("Charlie", 22, "charliewatt@yahoo.com", "charliewatt");
 
       // Act
       let name = testEngineer.getName();
@@ -44,7 +44,7 @@ describe ("Engineer", () => {
     it("should return role correctly", () => {
 
       // Arrange 
-      let testEngineer = new Engineer ("Charlie", 22 , "charliewatt@yahoo.com", "charliewatt");
+      let testEngineer = new Engineer ("Charlie", 22, "charliewatt@yahoo.com", "charliewatt");
 
       // Act
       let role = testEngineer.getRole();
@@ -61,7 +61,7 @@ describe ("Engineer", () => {
     it("should return id correctly", () => {
       
       // Arrange 
-      let testEngineer = new Engineer ("Charlie", 22 , "charliewatt@yahoo.com", "charliewatt");
+      let testEngineer = new Engineer ("Charlie", 22, "charliewatt@yahoo.com", "charliewatt");
 
       // Act
       let id = testEngineer.getId();
@@ -75,16 +75,33 @@ describe ("Engineer", () => {
 
   describe("getEmail", () => {
 
-    it("should return email correctlty", () => {
+    it("should return email correctly", () => {
 
       // Arrange 
-      let testEngineer = new Engineer ("Charlie", 22 , "charliewatt@yahoo.com", "charliewatt");
+      let testEngineer = new Engineer ("Charlie", 22, "charliewatt@yahoo.com", "charliewatt");
 
       // Act
       let email = testEngineer.getEmail();
   
       // Assert
       expect(email).toBe("charliewatt@yahoo.com");
+
+    });
+
+  });
+
+  describe("getGitHub", () => {
+
+    it("should return github username correctly", () => {
+
+      // Arrange 
+      let testEngineer = new Engineer ("Charlie", 22, "charliewatt@yahoo.com", "charliewatt");
+
+      // Act
+      let gitHub = testEngineer.getGitHub();
+  
+      // Assert
+      expect(gitHub).toBe("charliewatt");
 
     });
 
