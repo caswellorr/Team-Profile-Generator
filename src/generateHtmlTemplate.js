@@ -1,18 +1,17 @@
 // ============ GENERATE HTML TEMPLATE FUNCTION ================
 
-// create html for teamMembers
+
 const generateTeam = teamMembers => {
 
-  // create html for manager
+
   const generateManager = manager => {
 
     return `
     
-    <div class="card-pond">
     <section class="card">
       <article class="card-header">
         <h2>${manager.getName()}</h2>
-        <h3><i class=""></i>${manager.getRole()}</h3>
+        <h3><i class="fa-solid fa-mug-hot"></i>${manager.getRole()}</h3>
       </article>
       <article class="card-body">
         <ul class="card-list">
@@ -22,21 +21,19 @@ const generateTeam = teamMembers => {
         </ul>
       </article>
     </section>
-  </div>
   
   `
   };
 
-  // create html for engineer
+  
   const generateEngineer = engineer => {
 
     return `
     
-    <div class="card-pond">
     <section class="card">
       <article class="card-header">
         <h2>${engineer.getName()}</h2>
-        <h3><i class=""></i>${engineer.getRole()}</h3>
+        <h3><i class="fa-solid fa-glasses"></i>${engineer.getRole()}</h3>
       </article>
       <article class="card-body">
         <ul class="card-list">
@@ -46,20 +43,19 @@ const generateTeam = teamMembers => {
         </ul>
       </article>
     </section>
-  </div>
-  
+
   `
   };
 
-  // create html for intern
+
   const generateIntern = intern => {
 
     return `
-    <div class="card-pond">
+  
     <section class="card">
       <article class="card-header">
         <h2>${intern.getName()}</h2>
-        <h3><i class=""></i>${intern.getRole()}</h3>
+        <h3><i class="fa-solid fa-user-graduate"></i>${intern.getRole()}</h3>
       </article>
       <article class="card-body">
         <ul class="card-list">
@@ -69,8 +65,7 @@ const generateTeam = teamMembers => {
         </ul>
       </article>
     </section>
-  </div>
-
+ 
   `
   };
 
@@ -97,9 +92,6 @@ const generateTeam = teamMembers => {
 
 }
 
-
-
-// create html for team profile
 module.exports = teamMembers => {
 
   return `
@@ -129,9 +121,11 @@ module.exports = teamMembers => {
     <!-- ============ CARD ============ -->
   
     <main>
+      <div class="card-pond">
   
           ${generateTeam(teamMembers)}
-  
+
+      </div>
     </main>
   
   </body>
@@ -139,7 +133,5 @@ module.exports = teamMembers => {
   </html>
   
   `
-
-
 }
 

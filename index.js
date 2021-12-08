@@ -5,7 +5,7 @@ const fs = require('fs');
 
 // =============== IMPORT GENERATE HTML =================
 
-const generateHtmlTemplate = require('./src/generateHtmlTemplate.js');
+const generateHtmlTemplate = require('./src/generateHtmlTemplate');
 
 // ======== LIBRARY MODUELS ============
 
