@@ -3,9 +3,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// =============== IMPORT GENERATE HTML =================
+// =============== IMPORT GENERATE HTML TEMPLATE =================
 
-const generateHtmlTemplate = require('./src/generateHtmlTemplate');
+const generateMyTeam = require('./src/generateMyTeam');
 
 // ======== LIBRARY MODUELS ============
 
@@ -148,7 +148,7 @@ const createTeam = async (response) => {
     addTeamMember = addMember;
 
   }
-  
+
   if (!addTeamMember) {
 
     writeToFile(teamMembers);
@@ -165,7 +165,7 @@ function writeToFile(teamMembers) {
 
   console.log("team", teamMembers)
 
-  fs.writeFile('index.html', generateHtmlTemplate(teamMembers), (err) => {
+  fs.writeFile('index.html', generateMyTeam(teamMembers), (err) => {
     err
       ? console.log(err)
       : console.log("Success!")

@@ -1,10 +1,11 @@
+
+
 // ============ GENERATE HTML TEMPLATE FUNCTION ================
 
+const generateTeamCards = teamMembers => {
 
-const generateTeam = teamMembers => {
 
-
-  const generateManager = manager => {
+  const generateManagerCard = manager => {
 
     return `
     
@@ -25,8 +26,8 @@ const generateTeam = teamMembers => {
   `
   };
 
-  
-  const generateEngineer = engineer => {
+
+  const generateEngineerCard = engineer => {
 
     return `
     
@@ -48,7 +49,7 @@ const generateTeam = teamMembers => {
   };
 
 
-  const generateIntern = intern => {
+  const generateInternCard = intern => {
 
     return `
   
@@ -69,69 +70,80 @@ const generateTeam = teamMembers => {
   `
   };
 
+  const employeeCards = [];
 
-  const html = [];
-
-  html.push(teamMembers
+  employeeCards.push(teamMembers
     .filter(teamMember => teamMember.getRole() === "Manager")
-    .map(manager => generateManager(manager))
+    .map(manager => generateManagerCard(manager))
+    .join("")
 
   );
-  html.push(teamMembers
+
+  employeeCards.push(teamMembers
     .filter(teamMember => teamMember.getRole() === "Engineer")
-    .map(engineer => generateEngineer(engineer))
+    .map(engineer => generateEngineerCard(engineer))
     .join(" ")
 
   );
-  html.push(teamMembers
+
+  employeeCards.push(teamMembers
     .filter(teamMember => teamMember.getRole() === "Intern")
-    .map(intern => generateIntern(intern))
+    .map(intern => generateInternCard(intern))
     .join(" ")
 
   );
+
+  return employeeCards.join("");
 
 }
 
-module.exports = teamMembers => {
+
+const generateMyTeamHtml = teamMembers => {
 
   return `
 
   <!DOCTYPE html>
-  <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Profiles</title>
-  
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../dist/style.css">
-  
-  </head>
-  
-  <body>
-  
-    <!-- =========== HEADER ============ -->
-  
-    <header>
-      <h1>My Team</h1>
-    </header>
-  
-    <!-- ============ CARD ============ -->
-  
-    <main>
-      <div class="card-pond">
-  
-          ${generateTeam(teamMembers)}
+<html lang="en">
 
-      </div>
-    </main>
-  
-  </body>
-  
-  </html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Profiles</title>
+
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/731caf872c.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../client/style.css">
+
+</head>
+
+<body>
+
+  <!-- =========== HEADER ============ -->
+
+  <header>
+    <h1>My Team</h1>
+  </header>
+
+  <!-- ============ CARD ============ -->
+
+  <main>
+
+    <div class="card-pond">
+      ${generateTeamCards(teamMembers)}
+    </div>
+
+
+  </main>
+
+</body>
+
+</html>
   
   `
+
 }
 
+module.exports = generateMyTeamHtml;

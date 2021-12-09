@@ -16,7 +16,7 @@ describe ("Manager", () => {
       expect(testManager.name).toBe("Mick");
       expect(testManager.id).toBe(10);
       expect(testManager.email).toBe("mickjagger@yahoo.com");
-      expect(testManager.officeNmuber).toBe(1966);
+      expect(testManager.officeNumber).toBe(1966);
 
     });
 
