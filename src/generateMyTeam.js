@@ -40,7 +40,7 @@ const generateTeamCards = teamMembers => {
         <ul class="card-list">
           <li class="card-list-item">ID: ${engineer.getId()}</li>
           <li class="card-list-item">Email: <a href="${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-          <li class="card-list-item">GitHub: ${engineer.getGitHub()}</li>
+          <li class="card-list-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</a></li>
         </ul>
       </article>
     </section>

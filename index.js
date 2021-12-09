@@ -149,6 +149,8 @@ const createTeam = async (response) => {
 
   }
 
+  // IF user would not like to add another team member and create the team
+
   if (!addTeamMember) {
 
     writeToFile(teamMembers);
