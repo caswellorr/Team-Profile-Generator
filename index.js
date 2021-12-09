@@ -7,7 +7,7 @@ const fs = require('fs');
 
 const generateMyTeam = require('./src/generateMyTeam');
 
-// ======== LIBRARY MODUELS ============
+// ======== LIBRARY MODULES ============
 
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
