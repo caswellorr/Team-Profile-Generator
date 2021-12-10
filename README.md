@@ -1,6 +1,6 @@
 # 🏗️ Team Profile Generator
 
-Link : 
+Link : https://watch.screencastify.com/v/JGxa6fA6FBH3oFq5U3c1
 
 ## Description 📖
 
